@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import Journal from './pages/Journal';
 import History from './pages/History';
 import Insights from './pages/Insights';
+import AuthCallback from './pages/AuthCallback';
 
 const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
   const { user } = useAuth();
@@ -32,6 +33,10 @@ function App() {
         {
           path: "/register",
           element: <Register />,
+        },
+        {
+          path: "/auth/callback",
+          element: <AuthCallback />,
         },
         {
           path: "/journal",
